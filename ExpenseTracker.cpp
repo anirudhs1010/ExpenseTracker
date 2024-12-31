@@ -26,6 +26,7 @@ void addExpense(const string& description, double amount) {
     currentID++;
 }
 
+
 // Function to parse arguments
 map<string, string> parseArguments(int argc, char* argv[]) {
     map<string, string> options;
@@ -62,13 +63,16 @@ int main(int argc, char* argv[]) {
                 cerr << "Error: Missing required options --description or --amount.\n";
                 return 1;
             }
+            //cout << "ID     Description    Amount" << endl;
+            //for (int i= 0; i < expenses.size(); i++) {
+                //cout << expenses[i].id << " " << expenses[i].description << " " << expenses[i].amount<< endl;
+           // }
+        }
+        else if (command == "list") {
             cout << "ID     Description    Amount" << endl;
             for (int i= 0; i < expenses.size(); i++) {
                 cout << expenses[i].id << " " << expenses[i].description << " " << expenses[i].amount<< endl;
             }
-        }
-        else if (command == "list") {
-            
         } else {
             cerr << "Error: Unknown command \"" << command << "\".\n";
             return 1;
