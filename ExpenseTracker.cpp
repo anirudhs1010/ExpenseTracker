@@ -7,7 +7,6 @@
 #include <stdexcept>
 #include <ctime>
 #include <iomanip> //using get_time
-
 using namespace std;
 
 // Structure to hold an expense
